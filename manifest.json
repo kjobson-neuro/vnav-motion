@@ -1,0 +1,52 @@
+{
+  "author": "Katie Jobson <k.r.jobson@gmail.com>",
+  "maintainer": "Katie Jobson <k.r.jobson@gmail.com>",
+  "cite": "",
+  "name": "vnav-motion",
+  "source": "",
+  "url": "",
+  "label": "vNav Motion: Motion scores from vNav setter DICOMs",
+  "description": "Gear that computes vNav motion scores (RMS and max, per minute) from vNav setter DICOMs",
+  "command": "python3 /flywheel/v0/run.py",
+  "config": {
+    "tr": {
+      "description": "TR (sec) of the host T1w sequence, i.e. time between vNav frames.",
+      "type": "number",
+      "default": 2.4
+    },
+    "radius": {
+      "description": "Radius (mm) of the assumed head sphere. If not set, the script default of 100 mm is used.",
+      "type": "number",
+      "optional": true
+    }
+  },
+  "license": "MIT",
+  "version": "0.1.0",
+  "environment": {
+    "FLYWHEEL": "/flywheel/v0",
+    "PATH": "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "LANG": "C.UTF-8",
+    "PYTHON_VERSION": "3.12.16",
+    "GPG_KEY": "7169605F62C751356D054A26A821E680E5FA6305",
+    "PYTHON_SHA256": "b5796915dc45ff745cfb4e990a7e7c93d6f546328a102ce31448d69ebc37575c",
+    "PWD": "/flywheel/v0"
+  },
+  "custom": {
+    "gear-builder": {
+      "category": "analysis",
+      "image": "kjobson/vnav-motion:0.1.0"
+    },
+    "flywheel": {
+      "suite": "Analysis"
+    }
+  },
+  "inputs": {
+    "api_key": {
+      "base": "api-key"
+    },
+    "vnav": {
+      "base": "file",
+      "description": "vNav setter DICOMs (zip), e.g. ABCD_T1w_MPR_vNav_setter"
+    }
+  }
+}

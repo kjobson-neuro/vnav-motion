@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vnav-motion"
+version = "0.1.0"
+description = "Flywheel gear to extract motion parameters from vNav T1w images"
+requires-python = ">=3.9"
+dependencies = [
+    "fw-gear[sdk]~=0.3.0",
+    "numpy",
+    "pydicom",
+]
+
+[tool.setuptools]
+py-modules = []
+
+[tool.ruff.lint]
+select = ["A", "B", "E", "W", "F", "I", "RUF", "SIM", "C90", "PLW0406", "COM818", "SLF001"]

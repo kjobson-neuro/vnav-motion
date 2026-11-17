@@ -1,0 +1,18 @@
+{
+  "config": {
+    "tr": 2.4
+  },
+  "inputs": {
+    "vnav": {
+      "base": "file",
+      "location": {
+        "path": "/flywheel/v0/input/vNav_setter.dicom.zip",
+        "name": "vNav_setter.dicom.zip"
+      },
+      "object": {
+        "type": "dicom"
+      }
+    }
+  },
+  "destination": {}
+}
