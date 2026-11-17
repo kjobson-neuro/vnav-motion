@@ -12,7 +12,7 @@
     "tr": {
       "description": "TR (sec) of the host T1w sequence, i.e. time between vNav frames.",
       "type": "number",
-      "default": 2.4
+      "optional": false
     },
     "radius": {
       "description": "Radius (mm) of the assumed head sphere. If not set, the script default of 100 mm is used.",
@@ -21,7 +21,7 @@
     }
   },
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "environment": {
     "FLYWHEEL": "/flywheel/v0",
     "PATH": "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
@@ -34,7 +34,7 @@
   "custom": {
     "gear-builder": {
       "category": "analysis",
-      "image": "kjobson/vnav-motion:0.1.0"
+      "image": "kjobson/vnav-motion:0.2.0"
     },
     "flywheel": {
       "suite": "Analysis"
